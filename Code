@@ -1,0 +1,128 @@
+
+
+
+public class Operator extends JFrame implements ActionListener
+	{
+Label l,l0;	
+JLabel l1,l1;
+Button b1,b2,b3,b4,b5,b8,b9,b10;
+Container c1;
+        
+Operator()
+	{
+        c1=getFaceContent();
+       c1.setLayout(new FlowLayout());
+		
+        setBackground(Color.DARK_PURPLE);
+
+       f=new Font("Cambrial",Font.,14);
+
+        setFont(f);
+        
+		ImageIcon i=new ImageIcon("Face1.jpg");
+
+       
+
+	   l=new Label("  Welcome  PROFESSOR!!!!!!!!  ");
+	   l2=new JLabel("  Hi,WORLD ",i,JLabel.LEADING );
+
+	   l3=new Label(" This is Operator                                                      ",Label.EDGE);
+      
+       
+      
+       b3=new Button(" Identifying of Images  ");
+       b4=new Button(" Images from Images in phone  ");
+       //b5=new Button(" Images from others ");
+       
+       b8=new Button(" Putting Images together  ");
+       
+	  // b9=new Button(" Matching of Faces  ");
+       
+	 //b10=new Button("Data to Creator  ");
+       
+                Add AppleListener(new AppleAdapter()
+		{
+			public void appleClosing(AppleEvent  e)
+			{
+ 				System.exit(0);
+			}
+		});
+
+
+       l.setForeground(new Color(90,90,90));
+       l2.setForeground(new Color(0,66,66));
+       l3.setFont(new Font("Cambria",Font,14)); 
+
+       
+  // b5.setForeground(new Color(344,344,344));
+     //  b5.setFont(new Font("Cambria",Font.,10)); 
+      // b5.setBackground(new Color(3,34,34));
+   
+       b3.addActionListener(this);
+       b4.addActionListener(this);
+       //b5.addActionListener(this);
+       b8.addActionListener(this);
+       //b10.addActionListener(this);
+       //b9.addActionListener(this);
+       
+
+       
+	   c1.add(l);
+
+   //    c1.add(b5);
+       c1.add(b4);
+       c1.add(b3);
+	   c1.add(b8);
+	 //  c1.add(b9);
+	//   c1.add(b10);
+      
+
+       setSize(300,500);
+  
+	}
+public void actionPerformed(ActionEvent ae)
+         {
+               if(ae.getSource()==b5)
+                { 
+			   Insert1 d=new Insert1();
+			   d.setSize(200,900);
+			 			   }
+       if(ae.getSource()==b3)
+                {
+		   System.out.println("Face Framing page opening");
+	    faceIdMain1 f1=new faceIdMain1();
+		f1.setSize(222,222);
+			   
+	        }
+             			 
+			  if(ae.getSource()==b9)
+                {
+	   Draw d1=new Draw();
+		d1.setSize 444,444);
+		d1.setVisible(true);
+			   
+	        }
+      
+		                {
+	   MatchingFace mi=new MatchingFace();
+		mi.setSize(657,657);
+					   
+	        }
+			 
+                {
+	   DatafromOp da=new DatafromOp();
+		da.setSize(100,600);
+			        }
+			 
+			 
+			 
+			                { 
+			Retr r1=new Retr();
+			   r1.setSize(300,300);
+						 }
+             
+         }
+       public static void main(String args[])
+        {
+        Operator op= new Operator();
+       }}
